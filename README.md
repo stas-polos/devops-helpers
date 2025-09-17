@@ -1,7 +1,9 @@
 ## devops-helpers
 
 1. [Google Cloud](#create-or-select-a-google-cloud-project)
-    1. 2 [Connect to the VM instance](#connect-to-the-vm-instance)
+  1. 2 [Connect to the VM instance](#connect-to-the-vm-instance)
+2. [Terraform](#terraform)
+  
 
 ### Create or select a Google Cloud project.
 
@@ -79,4 +81,29 @@ gcloud compute ssh --zone=us-central1-a VM_NAME
 Connect to the VM instance you just created by running the following command:
 ```bash
 gcloud compute ssh --zone=us-central1-a VM_NAME
+```
+
+## Terraform
+Fow manage infrastructure, project (repo) are divided into [modules](#https://developer.hashicorp.com/terraform/tutorials/modules/module) to encapsulate all configuration files.
+```bash
+devops-helpers/
+├── modules/
+│   ├── gcs_bucket/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   ├── bigquery_dataset/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   └── vm_instance/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+└── envs/
+    └── dev/
+        ├── backend.tf
+        ├── provider.tf
+        ├── variables.tf
+        └── main.tf
 ```

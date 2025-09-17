@@ -30,17 +30,14 @@ variable "subnetwork" {
 variable "machine_type" {
   description = "Machine type for GCE instance."
   type        = string
-  default     = "e2-standard-2"
 }
 
 variable "image" {
   description = "Name of target image."
   type        = string
-  default     = "ubuntu-minimal-2210-kinetic-amd64-v20230126"
 }
 
 variable "machine_name" {
   description = "Compute Instance name."
   type        = string
-  default     = "vm-ubuntu-minimal-2210-kinetic-amd64-v20230126"
 }
