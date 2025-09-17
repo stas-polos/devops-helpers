@@ -1,9 +1,9 @@
 # devops-helpers
 
-1. [Usage](#usage)
-2. [Google Cloud](#create-or-select-a-google-cloud-project)
-    2.1 [Connect to the VM instance](#connect-to-the-vm-instance)
-3. [Terraform](#terraform)
+* [Usage](#usage)
+* [Google Cloud](#create-or-select-a-google-cloud-project)
+  * [Connect to the VM instance](#connect-to-the-vm-instance)
+* [Terraform](#terraform)
   
 
 ## Usage
@@ -70,11 +70,9 @@ gcloud projects add-iam-policy-binding PROJECT_ID --member="user:USER_IDENTIFIER
 ```
 
 Replace the following:
-    - `PROJECT_ID`: your project ID.
-
-    - `USER_IDENTIFIER`: the identifier for your user account.
-    
-    - `ROLE`: the IAM role that you grant to your user account.
+- `PROJECT_ID`: your project ID.
+- `USER_IDENTIFIER`: the identifier for your user account.
+- `ROLE`: the IAM role that you grant to your user account.
 
 Example result:
 ```bash
